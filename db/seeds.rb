@@ -9,26 +9,38 @@ admin = User.create(
 )
 admin.add_role :admin
 
-teacher = User.create(
-  email: 'teacher@user.cl',
-  password: 'abc12345'
-)
-teacher.add_role :teacher
+teachers = []
+(1..5).each do |n|
+  teacher = User.create(
+    email: 'teacher#{n}@user.cl',
+    password: 'abc12345'
+    )
+  teacher.add_role :teacher
+end
 
-student = User.create(
-  email: 'student@user.cl',
-  password: 'abc12345'
-)
-student.add_role :student
+students = []
+(1..20).each do |n|
+  student = User.create(
+    email: 'student#{n}@user.cl',
+    password: 'abc12345'
+  )
+  student.add_role :student
+end
 
-secretary = User.create(
-  email: 'secretary@user.cl',
-  password: 'abc12345'
-)
-secretary.add_role :secretary
+secretaries = []
+(1..2).each do |n|
+  secretary = User.create(
+    email: 'secretary#{n}@user.cl',
+    password: 'abc12345'
+  )
+  secretary.add_role :secretary
+end
 
-parent = User.create(
-  email: 'parent@user.cl',
-  password: 'abc12345'
-)
-parent.add_role :parent
+parents = []
+(1..20).each do |n|
+  parent = User.create(
+    email: 'parent#{n}@user.cl',
+    password: 'abc12345'
+  )
+  parent.add_role :parent
+end
