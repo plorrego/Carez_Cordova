@@ -8,4 +8,6 @@ class User < ApplicationRecord
 
   has_many :student_groups
   has_many :groups, :through => :student_groups
+  has_many :student_lectures
+  has_many :lectures, :through => :student_lectures
 end

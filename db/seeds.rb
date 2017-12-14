@@ -68,7 +68,16 @@ groups.each do |g|
   end
 end
 
-
+(1..5).each do |i|
+  lectures = []
+  (0..4).each do |n|
+    lecture = Lecture.create(
+      group_id: groups[n].id,
+      user_id: groups[n].user_id
+    )
+    lectures << lecture
+  end
+end
 
 
 
