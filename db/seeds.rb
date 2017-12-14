@@ -79,7 +79,30 @@ end
   end
 end
 
+questions = []
+(1..100).each do |n|
+  question = Question.create()
+  questions << question
+end
 
+papers = []
+(1..10).each do |n|
+  paper = Paper.create(
+    user_id: admin.id
+    )
+  papers << paper
+end
+
+question_papers = []
+papers.each do |p|
+  (1..20).each do |n|
+    question_paper = QuestionPaper.create(
+      paper_id: p.id,
+      question_id: questions.sample(1)[0].id
+    )
+    question_papers << question_paper
+  end
+end
 
 
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tests
+  resources :questions
   resources :lectures
   resources :groups
   get 'home/index'
